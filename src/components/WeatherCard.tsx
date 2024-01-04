@@ -50,20 +50,24 @@ const WeatherCard: React.FC<WeatherCardProps> = ({ lat, lon }) => {
                             <CircularProgress />
                         ) : (
                             <>
-                                <Typography>
-                                    <span style={{ fontWeight: 'bold', marginRight: 5 }}>Temperature:</span>{' '}
-                                    {weatherData?.main?.temp} °C
-                                </Typography>
+                                {weatherData && (
+                                    <>
+                                        <Typography>
+                                            <span style={{ fontWeight: 'bold', marginRight: 5 }}>Temperature:</span>{' '}
+                                            {weatherData?.main?.temp} °C
+                                        </Typography>
 
-                                <Typography>
-                                    <span style={{ fontWeight: 'bold', marginRight: 5 }}>Condition:</span>{' '}
-                                    {weatherData?.weather?.[0]?.main} - {weatherData?.weather[0]?.description}
-                                </Typography>
+                                        <Typography>
+                                            <span style={{ fontWeight: 'bold', marginRight: 5 }}>Condition:</span>{' '}
+                                            {weatherData?.weather?.[0]?.main} - {weatherData?.weather[0]?.description}
+                                        </Typography>
 
-                                <Typography>
-                                    <span style={{ fontWeight: 'bold', marginRight: 5 }}>Humidity:</span>{' '}
-                                    {weatherData?.main?.humidity}%
-                                </Typography>
+                                        <Typography>
+                                            <span style={{ fontWeight: 'bold', marginRight: 5 }}>Humidity:</span>{' '}
+                                            {weatherData?.main?.humidity}%
+                                        </Typography>
+                                    </>
+                                )}
                             </>
                         )}
                     </>
