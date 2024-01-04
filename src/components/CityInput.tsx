@@ -55,12 +55,12 @@ const CityInput: React.FC<CityInputProps> = ({ selectedCity, setSelectedCity }) 
         []
     )
 
-    const handleInputChange = (event: SyntheticEvent<Element, Event>, value: string) => {
+    const handleInputChange = (_event: SyntheticEvent<Element, Event>, value: string) => {
         setInputValue(value)
         debouncedFetchCities(value)
     }
 
-    const handleCitySelect = (event: SyntheticEvent<Element, Event>, newValue: City | null) => {
+    const handleCitySelect = (_event: SyntheticEvent<Element, Event>, newValue: City | null) => {
         setSelectedCity(newValue)
         selectedCityRef.current = newValue // Update the ref when a city is selected
         setOpen(false)
