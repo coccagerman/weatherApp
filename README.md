@@ -1,6 +1,6 @@
 -   To install project locally run "npm install"
 -   To run project run "npm run dev"
--   To test with Cypress run "npx cypress open"
+-   To test with Cypress run "npx cypress open" (need to have project running locally)
 
 # React + TypeScript + Vite
 
