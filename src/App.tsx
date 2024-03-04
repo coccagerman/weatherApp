@@ -8,6 +8,8 @@ import { Box, Typography } from '@mui/material'
 const App: React.FC = () => {
     const [selectedCity, setSelectedCity] = useState<City | null>(null)
 
+    console.log('test')
+
     return (
         <>
             <h1>Weather App</h1>
